@@ -3,24 +3,30 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
+
+
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+
+      <Person></Person>
+      <Person></Person>
+      <Person></Person>
       </header>
     </div>
   );
 }
+function Person(){
+  const personStyle={
+    border:'2px solid red',
+    margin:'10px'
+  }
+  return(
+  <div style={personStyle}>
+    <h2>Name : Jasim Uddin </h2>
+    <p>Job : SP Supervisor</p>
 
+  </div>
+  )
+}
 export default App;
