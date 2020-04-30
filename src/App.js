@@ -11,28 +11,28 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
+    <p>I am react Person</p>
 
-      <Person name="Rubel" nayika="Mousumi"></Person>
-      <Person name="Bapparaz" nayika="Shabana"></Person>
-      <Person name="Jasim Uddin" nayika="Saima"></Person>
-      <Person name={nayoks[0]} nayika={nayikas[2]}></Person>
+    <Person name=" Jasim Uddin" job="Player"></Person>
+    <Person name="Shohag" job="viewers"></Person>
+  
       </header>
     </div>
   );
 }
-function Person(props){
-  const personStyle={
-    border:'2px solid red',
-    margin:'10px'
-  }
-  console.log(props);
-  return(
-  <div style={personStyle}>
-    <h2>Nayak:{props.name} </h2>
-  <p>Nayaka :{props.nayika}</p>
-  
 
-  </div>
-  )
+function Person (props){
+
+    return (
+      <div style={{border:'2px solid gold', width:'400px'}}>
+        <h2>My Name:{props.name}</h2>
+    <p>My Profession:{props.job}</p>
+
+      </div>
+
+    )
+
+
 }
+
 export default App;
