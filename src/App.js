@@ -4,8 +4,15 @@ import './App.css';
 
 function App() {
 
-  const nayoks =['SochNagar', 'JakiSun', 'Arnald','Amir Khan'];
-  const nayikas =['kucbanu', 'chuckhatun', 'safali tak'];
+
+  const products = [
+    {name:'Photoshoop', price:'$90.99'},
+    {name:'Illustrator', price:'$40.20'},
+    {name:'Adove', price:'$20.22'}
+
+
+]
+  
 
 
   return (
@@ -13,14 +20,43 @@ function App() {
       <header className="App-header">
     <p>I am react Person</p>
 
-    <Person name=" Jasim Uddin" job="Player"></Person>
-    <Person name="Shohag" job="viewers"></Person>
+
+
+    <Product product ={products[0]}></Product>
+    <Product product={products[1]}></Product>
+    <Product product={products[2]}></Product>
   
       </header>
     </div>
   );
 }
 
+
+function Product(props){
+
+  const productStyle={
+    border:'1px solid gray',
+    borderRadius:'5px',
+    backgroundColor:'lightgray',
+    height:'300px',
+    width:'300px',
+    float:'left',
+    marginTop:'20px'
+  }
+  const {name,price} = props.product;
+  console.log(name,price);
+  return(
+   <div style={productStyle}>
+  
+  <h2>{name}</h2>
+  <h1>{price}</h1>
+    <button>Buy now</button>
+
+   </div>
+
+  )
+
+}
 function Person (props){
 
     return (
