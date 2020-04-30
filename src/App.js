@@ -4,11 +4,12 @@ import './App.css';
 
 function App() {
 
-
+const nayoks =['Hassan', 'Sagar', 'Kamal', 'Milon','KaluBillah'];
   const products = [
     {name:'Photoshoop', price:'$90.99'},
     {name:'Illustrator', price:'$40.20'},
-    {name:'Adove', price:'$20.22'}
+    {name:'Adove', price:'$20.22'},
+    {name:'Premire El', price:'30.22'}
 
 
 ]
@@ -20,8 +21,14 @@ function App() {
       <header className="App-header">
     <p>I am react Person</p>
 
+    <ul>
+  { nayoks.map(nayok => <li>{nayok}</li>)}
+    </ul>
 
-
+   
+    {
+    products.map(product=><Product product={product}></Product>)
+    }
     <Product product ={products[0]}></Product>
     <Product product={products[1]}></Product>
     <Product product={products[2]}></Product>
