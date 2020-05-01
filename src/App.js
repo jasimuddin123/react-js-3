@@ -41,9 +41,14 @@ const nayoks =['Hassan', 'Sagar', 'Kamal', 'Milon','KaluBillah'];
 function Counter (){
 
   const [count, setCount] = useState(10);
+  const handleIncrease = () => setCount(count + 1);
+  
   return(
 <div>
-  <h2>Count:{count}</h2>
+ 
+   <h2>Count:{count}</h2>
+  <button onClick={() => setCount(count + 1)}>Increase</button>
+  <button onMouseMove={() => setCount(count - 1)}>Decrease</button>
 
 </div>
 
